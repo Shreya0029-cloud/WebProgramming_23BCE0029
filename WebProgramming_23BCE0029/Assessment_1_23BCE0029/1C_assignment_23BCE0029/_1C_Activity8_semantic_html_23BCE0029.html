@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Web Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Montserrat:wght@600&family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+        /* General Styling */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 50px;
+            text-align: center;
+            border-bottom: 4px solid #333;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        header h1 {
+            font-size: 40px;
+            margin: 0;
+            font-family: 'Pacifico', cursive;
+        }
+
+        header p {
+            font-size: 20px;
+            font-style: italic;
+        }
+
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            border-bottom: 2px solid #ccc;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        article {
+            padding: 30px;
+            background-color: #fff;
+            margin: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border: 2px solid #ddd;
+            border-radius: 8px;
+        }
+
+        article h2 {
+            font-size: 32px;
+            color: #333;
+            font-family: 'Montserrat', sans-serif;
+            border-bottom: 3px solid #4CAF50;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        section, aside {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        section h3 {
+            font-size: 24px;
+            color: #4CAF50;
+            margin-bottom: 10px;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        aside {
+            background-color: #e9e9e9;
+            margin-top: 25px;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 30px;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            border-top: 4px solid #ccc;
+        }
+
+        footer h3 {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        footer form input, footer form textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        footer form button {
+            padding: 12px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        footer form button:hover {
+            background-color: #45a049;
+        }
+
+        img {
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            margin: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        img:hover {
+            transform: scale(1.05);
+        }
+
+        video {
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        ul li a {
+            color: #4CAF50;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        ul li a:hover {
+            color: #45a049;
+        }
+
+        .fade-in {
+            animation: fadeIn 2s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .card {
+            background: #fff;
+            padding: 20px;
+            margin: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card img {
+            border-radius: 8px;
+            width: 100%;
+            height: auto;
+        }
+
+        .card-content {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Welcome to My Web Page</h1>
+        <p>Explore My Themes and Activities</p>
+    </header>
+
+    <!-- Navigation Section -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#navigation">Navigation</a>
+        <a href="#blog">Blog</a>
+        <a href="#contact">Contact Us</a>
+    </nav>
+
+    <!-- Article Section (Home) -->
+    <article id="home" class="fade-in">
+        <h2>Home Page</h2>
+        <p>Welcome to my web page where I share my projects, thoughts, and activities. This page is designed to showcase my work and offer a chance to connect. Whether you're interested in my coding projects, design work, or just want to chat, feel free to explore the sections below!</p>
+    </article>
+
+    <!-- Article Section (Navigation) -->
+    <article id="navigation" class="fade-in">
+        <h2>Navigation</h2>
+        <section>
+            <h3>Activity 1A</h3>
+            <p>Activity 1: Text formatting and images
+Design a web page “home.html” that describes about you and it include all of the following
+information
+<br><br>Activity 2: List (list.html)
+Use appropriate list elements to represent the following data
+• List of courses in Winter 2024-2025.
+• List the programming languages and provide rating yourself out of 10.
+• Add reviews or book summary of your 3 favourite movies/books/TV shows/ music
+concert.<br><br>Activity 3: Tables and Hyperlinks (table.html)
+Use the tables as depicts in the following figure
+• r1c1 – include any images of your choice
+• r1c3, r5c1, r4c1, r4c2- shades with your favourite color
+• r1c4, r5c3, r6c4, r5c5- include your positive affirmations (use font family, color,
+formatting as per choice)
+• r3c1- provide links to “home.html”
+• r2c3- Email as hyperlinks
+• r3c4- image as hyperlinks</p>
+        </section>
+        <section>
+            <h3>Activity 1B</h3>
+            <p>Activity 4:Trace the output for the following elements and infer the similarities and
+differences
+<br>1. Div and span<br>2. Div and section
+<br>3. Paragraph and article<br>4. Navigation and anchor<br>5. Figure and image<br>6. Label and legends<br>7. Strong vs bold vs emphasis tag<br><br>Activity 5:
+• Create a GitHub repository and upload all your web pages.
+• Prepare a video report about Hosting Website on GitHub (Max 3 Mins)
+Note: Use the video in the Activity 8 and embed the same in your website</p>
+        </section>
+        <section>
+            <h3>Activity 1C</h3>
+            <p>Activity 6: HML forms<br>
+Design a web page to receive input from the user using form fields of your choice. The form
+fields should include the following<br>
+Form 1:<br>
+Signup details and sign in (input type – text box (character, email id, password), checkbox,
+button)<br>
+• Use action attribute to link between the sign-up and sign-in<br>
+Form 2:<br>
+Design a web page for enabling all the HTML 5 elements and choose appropriate attribute for
+the following<br>
+• Text box<br>
+• Radio Buttons<br>
+• Check Boxes<br>
+• Selection Box of size 3 (i.e. a Scrolled Selection Box)<br>
+• Option Box<br>
+• TextArea Box<br>
+• Label<br>
+• Fieldset<br>
+• Legend<br>
+• Datalist<br>
+• Include as of your choice<br><br>Activity 7:<br>
+Incorporate HTML Block div and Inline Elements span in the existing “activity 1”.<br><br>Activity 8:<br> Semantic html
+Design a web page of your choice “myindex.html” and include the following information as
+follows.<br>
+• Home Page - Short Descriptions about your theme.<br>
+• Navigation page- include all the activity listed in assignment 1A ,1B, and 1C<br>
+• Blog Page – Photos/ videos/ hyperlinks<br>
+• Contact us – Use your intuitive approach and add the form fields for a contact us page
+in the footer.  </p>
+        </section>
+    </article>
+
+    <!-- Blog Section -->
+    <article id="blog" class="fade-in">
+        <h2>Blog Page</h2>
+        <section class="card">
+            <h3>Photo Gallery</h3>
+            <p>Here are some snapshots of my work and creative projects. Feel free to browse through the images!</p>
+            <img src="https://assets.onecompiler.app/433d5y54y/433h7snxg/pipo.jpg" alt="Sample Image 1">
+            <img src="https://assets.onecompiler.app/433d5y54y/433dcst4g/img1.jpg" alt="Sample Image 2">
+        </section>
+        <section class="card">
+            <h3>Videos</h3>
+            <p>Check out my latest video tutorials and projects.</p>
+            <video width="320" height="240" controls>
+                <source src="https://www.w3schools.com/html/movie.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </section>
+        <section class="card">
+            <h3>Useful Links</h3>
+            <ul>
+                <li><a href="https://www.w3schools.com" target="_blank">W3Schools</a></li>
+                <li><a href="https://www.github.com" target="_blank">GitHub</a></li>
+            </ul>
+        </section>
+    </article>
+
+    <!-- Contact Us Section -->
+    <article id="contact" class="fade-in">
+        <h2>Contact Us</h2>
+        <section>
+            <p>If you have any questions or would like to get in touch with me, please feel free to contact me through the form below.</p>
+        </section>
+        <footer>
+            <h3>Contact Form</h3>
+            <form action="#">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </footer>
+    </article>
+
+</body>
+</html>

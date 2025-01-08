@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colorful HTML5 Form</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .form-container {
+            max-width: 900px;
+            padding: 20px 30px;
+            background: #ffffff;
+            border: 5px solid #ff6f61;
+            border-radius: 20px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            font-size: 16px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #ff6f61;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 5px rgba(255, 111, 97, 0.5);
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin: 10px 0 5px;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea,
+        select,
+        datalist {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            background: #f9f9f9;
+            transition: 0.3s ease;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        textarea:focus,
+        select:focus {
+            outline: none;
+            border-color: #ff6f61;
+            box-shadow: 0 0 8px rgba(255, 111, 97, 0.5);
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        fieldset {
+            border: 3px solid;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            background: #ffffff;
+        }
+
+        /* Unique Colors for Fieldsets */
+        fieldset:nth-child(2) {
+            border-color: #f48fb1;
+            background: #ffeef5;
+        }
+
+        fieldset:nth-child(3) {
+            border-color: #81d4fa;
+            background: #e0f7fa;
+        }
+
+        fieldset:nth-child(4) {
+            border-color: #aed581;
+            background: #f1f8e9;
+        }
+
+        fieldset:nth-child(5) {
+            border-color: #ffb74d;
+            background: #fff8e1;
+        }
+
+        fieldset:nth-child(6) {
+            border-color: #ba68c8;
+            background: #f3e5f5;
+        }
+
+        fieldset:nth-child(7) {
+            border-color: #4db6ac;
+            background: #e0f2f1;
+        }
+
+        legend {
+            font-weight: bold;
+            font-size: 1.2em;
+            padding: 5px 10px;
+            color: white;
+            background: linear-gradient(to right, #ff6f61, #f48fb1);
+            border-radius: 10px;
+        }
+
+        button {
+            background: linear-gradient(to right, #ff6f61, #f48fb1);
+            color: #fff;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: bold;
+            transition: 0.3s ease;
+        }
+
+        button:hover {
+            background: linear-gradient(to right, #f48fb1, #ff6f61);
+            box-shadow: 0 10px 20px rgba(255, 111, 97, 0.5);
+        }
+
+        .note {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Colorful HTML5 Form</h1>
+        <form action="#" method="post">
+            <!-- Text Box -->
+            <fieldset>
+                <legend>Text Box</legend>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            </fieldset>
+
+            <!-- Radio Buttons -->
+            <fieldset>
+                <legend>Radio Buttons</legend>
+                <label>
+                    <input type="radio" name="gender" value="male" required> Male
+                </label>
+                <label>
+                    <input type="radio" name="gender" value="female" required> Female
+                </label>
+                <label>
+                    <input type="radio" name="gender" value="other" required> Other
+                </label>
+            </fieldset>
+
+            <!-- Check Boxes -->
+            <fieldset>
+                <legend>Check Boxes</legend>
+                <label>
+                    <input type="checkbox" name="hobbies" value="reading"> Reading
+                </label>
+                <label>
+                    <input type="checkbox" name="hobbies" value="traveling"> Traveling
+                </label>
+                <label>
+                    <input type="checkbox" name="hobbies" value="sports"> Sports
+                </label>
+            </fieldset>
+
+            <!-- Selection Box -->
+            <fieldset>
+                <legend>Scrolled Selection Box</legend>
+                <label for="colors">Choose your favorite colors (max 3):</label>
+                <select id="colors" name="colors[]" size="3" multiple>
+                    <option value="red">Red</option>
+                    <option value="blue">Blue</option>
+                    <option value="green">Green</option>
+                    <option value="yellow">Yellow</option>
+                    <option value="purple">Purple</option>
+                </select>
+            </fieldset>
+
+            <!-- Option Box -->
+            <fieldset>
+                <legend>Option Box</legend>
+                <label for="country">Choose your country:</label>
+                <select id="country" name="country" required>
+                    <option value="">--Select--</option>
+                    <option value="india">India</option>
+                    <option value="usa">USA</option>
+                    <option value="canada">Canada</option>
+                    <option value="australia">Australia</option>
+                </select>
+            </fieldset>
+
+            <!-- TextArea Box -->
+            <fieldset>
+                <legend>TextArea Box</legend>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" placeholder="Enter your message"></textarea>
+            </fieldset>
+
+            <!-- Datalist -->
+            <fieldset>
+                <legend>Datalist</legend>
+                <label for="city">Choose your city:</label>
+                <input type="text" id="city" name="city" list="city-options" placeholder="Type your city">
+                <datalist id="city-options">
+                    <option value="New York">
+                    <option value="Los Angeles">
+                    <option value="Chicago">
+                    <option value="Houston">
+                    <option value="Phoenix">
+                </datalist>
+            </fieldset>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

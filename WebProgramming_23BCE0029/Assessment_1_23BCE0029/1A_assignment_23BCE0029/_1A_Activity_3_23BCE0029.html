@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Layout</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            
+        }
+        img{
+           height: 100%;
+           
+        }
+
+        td {
+            border: 1px solid black;
+            text-align: center;
+            height: 50px;
+            width: 50px;
+          
+        }
+        .empty{
+            border: none;
+        }
+        .lavender{
+            background-color: lavender;
+        }
+        .positive{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: bold;
+            background-color:antiquewhite
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <div>
+            <tr>
+             <td class="empty"></td>
+             <td class="empty"></td>
+             <td class="empty"></td>
+             <td class="empty"></td>
+             <td class="empty"></td>
+             <td class="empty"></td>
+              <td class="empty"></td>
+            </tr>
+        <tr>
+            <td rowspan="2" colspan="2"><img src="https://assets.onecompiler.app/433d5y54y/433h7snxg/pipo.jpg"></td>
+            <td class="lavender">r1c3</td>
+            <td rowspan="2" class="positive">r1c4</td>
+            <td rowspan="2" colspan="2">r1c5</td>
+        </tr>
+        <tr>
+      
+            <td rowspan="2"><a href="mailto:shreya.rajendra2023@vitstudent.ac.in">Email</a></td>
+            <td style="border: none;"></td>
+           
+        </tr>
+        <tr>
+            <td colspan="2"><a href="">home</a></td>
+            <td colspan="2"><a href="https://www.google.co.in/"><img src="https://assets.onecompiler.app/433d5y54y/433dcst4g/img1.jpg"></a></td>
+            
+            <td>r3c6</td>
+            
+        </tr>
+        <tr>
+            <td class="lavender">r4c1</td>
+            <td colspan="2 " class="lavender">r4c2</td>
+            <td rowspan="2">r4c4</td>
+            <td colspan="2">r4c5</td>
+        </tr>
+        <tr>
+            <td rowspan="2" colspan="2" class="lavender">r5c1</td>
+            <td rowspan="2"  class="positive">r5c3</td>
+            <td rowspan="2" colspan="2"  class="positive">r5c5</td>
+            <td style="border: none;"></td>
+        </tr>
+       <tr>
+        <td  class="positive">r6c4</td>
+       </tr>
+    </table>
+</body>
+</html>
